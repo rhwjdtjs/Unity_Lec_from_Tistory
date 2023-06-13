@@ -70,8 +70,6 @@ public class StatusManager : MonoBehaviour
 
         HPSLIDER.maxValue = playerInfo.hp;
         EXPSlider.maxValue = NeedEXP(playerInfo.LV);
-
-        updateText();
     }
 
     public void GetEXP(int amount) //경험치를 얻을때 불러오는 함수
@@ -79,8 +77,6 @@ public class StatusManager : MonoBehaviour
         playerInfo.exp += amount;
         if (playerInfo.exp >= EXPSlider.maxValue)
             LevelUp();
-
-        updateText();
     }
 
     // Update is called once per frame
