@@ -75,7 +75,7 @@ public class StatusManager : MonoBehaviour
     public void GetEXP(int amount) //경험치를 얻을때 불러오는 함수
     {
         playerInfo.exp += amount;
-        if (playerInfo.exp >= EXPSlider.maxValue)
+        if (playerInfo.exp >= NeedEXP(playerInfo.LV))
             LevelUp();
     }
 
